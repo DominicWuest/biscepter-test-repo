@@ -10,5 +10,9 @@ func main() {
 	http.HandleFunc("/1", func(w http.ResponseWriter, r *http.Request) { io.WriteString(w, "-1") })
 	http.HandleFunc("/2", func(w http.ResponseWriter, r *http.Request) { io.WriteString(w, "-1") })
 
+	http.HandleFunc("/3", func(w http.ResponseWriter, r *http.Request) { io.WriteString(w, "3") })
+	http.HandleFunc("/4", func(w http.ResponseWriter, r *http.Request) { io.WriteString(w, "4") })
+	http.HandleFunc("/5", func(w http.ResponseWriter, r *http.Request) { io.WriteString(w, "5") })
+
 	http.ListenAndServe(":3333", nil)
 }
